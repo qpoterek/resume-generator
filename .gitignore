@@ -19,9 +19,8 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# All but examples
+# Ignore all but example files
 output/*
 !output/example.pdf
-# public/images/profile-picture.png
-# data/general.js
-# data/resume.js
+public/images/profile-picture.png
+src/data/*
