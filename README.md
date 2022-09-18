@@ -14,11 +14,11 @@ A simple tool for generating single-page resumes as A4 webpages, that can then b
 	<img alt="JavaScript" src="https://img.shields.io/badge/-javascript-fdd835?style=for-the-badge&logo=javascript&logoColor=black">
 	<img alt="NPM" src="https://img.shields.io/badge/-npm-e53935?style=for-the-badge&logo=npm&logoColor=white">
 	<img alt="Astro" src="https://img.shields.io/badge/-astro-fb8c00?style=for-the-badge&logo=astro&logoColor=white">
-	<img alt="Vue" src="https://img.shields.io/badge/-vue-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
+	<img alt="Vue.js" src="https://img.shields.io/badge/-vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
 	<img alt="Tailwind CSS" src="https://img.shields.io/badge/-tailwind_css-039be5?style=for-the-badge&logo=tailwindcss&logoColor=white">
 </p>
 
-This portfolio was built using [Astro](https://astro.build/) and [Vue.js](https://vuejs.org/) frameworks, along with [Tailwind CSS](https://tailwindcss.com/) for styling.
+This portfolio was built using the [Astro](https://astro.build/) and [Vue.js](https://vuejs.org/) frameworks, along with [Tailwind CSS](https://tailwindcss.com/) for styling.
 
 ## 📁 Project structure
 
