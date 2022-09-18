@@ -1,0 +1,25 @@
+---
+import Badge from "./Badge.astro"
+import Category from "./Category.astro"
+
+const { content } = Astro.props
+
+function getPeriod(item) {
+	return item.to ? `${item.from} à ${item.to}` : item.from
+}
+---
+
+<Category title={content.title} iconName="graduation-cap" area="right">
+	<div class="flex flex-col gap-y-3">
+		{
+			content.diplomas.map(item => (
+				<div class="flex flex-col gap-y-1">
+					<p>
+						<Badge item={getPeriod(item)} /> {item.title}
+					</p>
+					<p class="ml-4 text-neutral-500">{item.location}{item.honors && `, ${item.honors}`}</p>
+				</div>
+			))
+		}
+	</div>
+</Category>

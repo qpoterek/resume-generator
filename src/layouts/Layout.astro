@@ -1,0 +1,26 @@
+---
+const { data } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang={data.language}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{data.information.name}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style>
+	body {
+		margin: 0;
+		height: 297mm;
+		width: 210mm;
+		background-color: #252525;
+		font-family: "Fira Sans";
+	}
+</style>

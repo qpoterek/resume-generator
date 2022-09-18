@@ -1,0 +1,37 @@
+---
+import Badge from "./Badge.astro"
+import Category from "./Category.astro"
+
+const { content } = Astro.props
+
+function getPeriod(item) {
+	return item.to ? `${item.from} à ${item.to}` : item.from
+}
+---
+
+<Category title={content.title} iconName="briefcase" area="right">
+	<div class="flex flex-col gap-y-3">
+		{
+			content.items.map(item => (
+				<div class="flex flex-col gap-y-1">
+					<p class="pb-2">
+						<Badge item={getPeriod(item)} /> <strong>{item.position}</strong> <span class="text-neutral-500">— {item.location}</span>
+					</p>
+					<>
+					{
+						item.header &&
+						<p>{item.header}</p>
+					}
+					</>
+					<>
+					{
+						item.tasks.map(task => (
+							<p>— {task}</p>
+						))
+					}
+					</>
+				</div>
+			))
+		}
+	</div>
+</Category>

@@ -1,0 +1,43 @@
+---
+import general from "../data/general"
+import resume from "../data/resume"
+
+import Education from "../components/Education.astro"
+import Information from "../components/Information.astro"
+import Jobs from "../components/Jobs.astro"
+import Languages from "../components/Languages.astro"
+import Layout from "../layouts/Layout.astro"
+import Skills from "../components/Skills.astro"
+import Tools from "../components/Tools.astro"
+
+import ProfilePicture from "/images/profile-picture.png"
+---
+
+<Layout data={general}>
+	<main class="bg-white p-12 text-sm">
+		<div class="relative bg-neutral-100 p-4 rounded-lg flex flex-col gap-y-2 pt-[164px]">
+			<Information picture={ProfilePicture} resume={resume} />
+			<Languages content={general.languages} />
+			<Skills content={resume.skills} />
+			<Tools content={resume.tools} />
+		</div>
+		<div class="flex flex-col gap-y-2 break-words text-justify leading-[1.25]">
+			<Jobs content={resume.jobs} />
+			<Education content={general.education} />
+		</div>
+	</main>
+</Layout>
+
+<style is:global>
+	main {
+		display: grid;
+		grid-template-columns: 40% 60%;
+		column-gap: 16px;
+		height: 100%;
+		width: 100%;
+	}
+
+	.hyphens {
+		hyphens: auto;
+	}
+</style>

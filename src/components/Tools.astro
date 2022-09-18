@@ -1,0 +1,16 @@
+---
+import Badge from "./Badge.astro"
+import Category from "./Category.astro"
+
+const { content } = Astro.props
+---
+
+<Category title={content.title} iconName="toolbox">
+	<div class="flex flex-col gap-y-1">
+		{
+			content.items.map(tools => (
+				<p><Badge item={tools.title}/> {tools.items.join(", ")}.</p>
+			))
+		}
+	</div>
+</Category>

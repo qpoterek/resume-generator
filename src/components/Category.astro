@@ -1,0 +1,12 @@
+---
+import CategoryTitle from "./CategoryTitle.astro"
+
+const { title, iconName, area="left" } = Astro.props
+---
+
+<div class="relative flex flex-col">
+	<CategoryTitle title={title} iconName={iconName} area={area} />
+	<div class="mt-12 flex flex-col">
+		<slot />
+	</div>
+</div>

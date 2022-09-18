@@ -1,0 +1,32 @@
+---
+import Category from "./Category.astro"
+import IconProvider from "./IconProvider.vue"
+
+const { content } = Astro.props
+
+const levelClassNames = "flex items-center gap-x-1"
+---
+
+<Category title={content.title} iconName="globe">
+	{
+		content.items.map(item => (
+			<p class="flex items-center gap-x-2">
+				<IconProvider name={item.icon} class="h-4 w-4" />
+				<strong>{item.title}</strong>
+				<span>—</span>
+				{
+					item.level && 
+					<span>{item.level}</span>
+				}
+				{
+					item.level_written && 
+					<span class={levelClassNames}><IconProvider name="pen-nib" />{item.level_written}</span>
+				}
+				{
+					item.level_spoken && 
+					<span class={levelClassNames}><IconProvider name="chats-circle" />{item.level_spoken}</span>
+				}
+			</p>
+		))
+	}
+</Category>

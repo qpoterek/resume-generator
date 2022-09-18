@@ -1,0 +1,11 @@
+---
+import Category from "./Category.astro"
+
+const { content } = Astro.props
+---
+
+<Category title={content.title} iconName="light-bulb">
+	{
+		content.items.map(item => <p class="-indent-4 ml-4 text-justify">{item}</p>)
+	}
+</Category>

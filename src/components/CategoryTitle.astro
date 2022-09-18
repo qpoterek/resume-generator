@@ -1,0 +1,14 @@
+---
+import IconProvider from "./IconProvider.vue"
+
+const { title, iconName, area="left" } = Astro.props
+
+const leftShift = area === "left" ? "-left-10" : ""
+---
+
+<div class={`absolute h-10 flex gap-x-4 items-center ${leftShift}`}>
+	<div class="bg-white rounded-full p-2">
+		<IconProvider name={iconName} classNames="h-8 w-8" />
+	</div>
+	<h2 class="text-base font-semibold uppercase">{title}</h2>
+</div>
